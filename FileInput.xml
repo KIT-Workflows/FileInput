@@ -1,0 +1,28 @@
+<WaNoTemplate>
+    <WaNoMeta>
+        <Author>
+            <Name> J. Schaarschmidt </Name>
+        </Author>
+
+        <Description>
+		This is a Generic WaNo to capture input Files
+        </Description>
+
+    </WaNoMeta>
+
+    <WaNoRoot name="InputFiles">
+	    <WaNoMultipleOf name="Files">
+		    <Element id="0">
+			    <WaNoString name="fname">name</WaNoString>
+			    <WaNoFile name="input_file" logical_filename="infile_{{ path[1] }}">Input File</WaNoFile>
+		    </Element>
+	    </WaNoMultipleOf>
+    </WaNoRoot>
+
+    <WaNoExecCommand>
+	    {% for fileinfo in wano['Files'] %}
+	     mv -v {{ fileinfo['input_file'] }} {{ fileinfo['fname'] }} 
+	    {% endfor %}
+    </WaNoExecCommand>
+
+</WaNoTemplate>

@@ -1,0 +1,15 @@
+{
+    "workflow_environment":"SimStack",
+    "title": "FileInput",
+    "description": "This is a WaNo Template",
+    "authors": [
+        "J. Schaarschmidt"
+    ],
+    "version": "0.0.1",
+    "logo": "FileInput.png",
+    "keywords": [
+        "SimStack",
+        "WaNo",
+        "template"
+    ]
+}
